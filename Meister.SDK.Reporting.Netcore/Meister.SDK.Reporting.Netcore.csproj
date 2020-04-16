@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Meister.SDK.Reporting.Netcore.pfx</AssemblyOriginatorKeyFile>
+    <Version>3.20.04.19</Version>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <PackageProjectUrl>http://www.meisterapplications.com</PackageProjectUrl>
+    <PackageIcon>Meister.jpg</PackageIcon>
+    <PackageReleaseNotes>Compiled for CoreNet 3.1</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>3.20.4.19</AssemblyVersion>
+    <FileVersion>3.20.4.19</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\Meister.SDK.Reporting\Controllers\MeisterSDKReporting.cs" Link="Controllers\MeisterSDKReporting.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\Content.cs" Link="MeisterModels\Content.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\edm.cs" Link="MeisterModels\edm.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\Generics.cs" Link="MeisterModels\Generics.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\MyReportsRequest.cs" Link="MeisterModels\MyReportsRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\MyReportsResponse.cs" Link="MeisterModels\MyReportsResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReadReportRequest.cs" Link="MeisterModels\ReadReportRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReadReportResponse.cs" Link="MeisterModels\ReadReportResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportFinderRequest.cs" Link="MeisterModels\ReportFinderRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportFinderResponse.cs" Link="MeisterModels\ReportFinderResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportParametersRequest.cs" Link="MeisterModels\ReportParametersRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportParametersResponse.cs" Link="MeisterModels\ReportParametersResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportRunRequest.cs" Link="MeisterModels\ReportRunRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportRunResponse.cs" Link="MeisterModels\ReportRunResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\ReportsByUser.cs" Link="MeisterModels\ReportsByUser.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\SchedulerRequest.cs" Link="MeisterModels\SchedulerRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\SchedulerResponse.cs" Link="MeisterModels\SchedulerResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\UpsertVariantRequest.cs" Link="MeisterModels\UpsertVariantRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\UpsertVariantResponse.cs" Link="MeisterModels\UpsertVariantResponse.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\VariantRequest.cs" Link="MeisterModels\VariantRequest.cs" />
+    <Compile Include="..\Meister.SDK.Reporting\MeisterModels\VariantResponse.cs" Link="MeisterModels\VariantResponse.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="MeisterModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="MeisterCore.NetCore" Version="3.20.4.16" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NuGet.CommandLine" Version="5.4.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Packaging" Version="5.5.1" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Meister.SDK.Reporting\Licenses\License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\Meister.SDK.Reporting\Licenses\Meister.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
