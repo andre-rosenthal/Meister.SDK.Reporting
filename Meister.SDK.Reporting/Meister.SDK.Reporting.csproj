@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
-    <Version>3.20.04.19</Version>
+    <Version>3.20.06.24</Version>
     <Description>Meister SDK Reporting Nuget</Description>
     <Copyright>Gateway Architects</Copyright>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
@@ -10,11 +10,11 @@
     <PackageIcon>Meister.jpg</PackageIcon>
     <PackageReleaseNotes>Compiled for Framework 4.8</PackageReleaseNotes>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Meister.SDK.Reporting.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Meister.SDK.Reporting.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>3.20.4.19</AssemblyVersion>
-    <FileVersion>3.20.4.19</FileVersion>
+    <AssemblyVersion>3.20.6.24</AssemblyVersion>
+    <FileVersion>3.20.6.24</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,15 +23,15 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="MeisterCore" Version="3.20.4.16" />
+    <PackageReference Include="MeisterCore" Version="3.20.6.24" />
     <PackageReference Include="Microsoft.Net.Http.Headers" Version="2.2.8" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="NuGet.CommandLine" Version="5.4.0">
+    <PackageReference Include="NuGet.CommandLine" Version="5.6.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="NuGet.Packaging" Version="5.5.1" />
-    <PackageReference Include="RestSharp" Version="106.10.1" />
+    <PackageReference Include="NuGet.Packaging" Version="5.6.0" />
+    <PackageReference Include="RestSharp" Version="106.11.4" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
