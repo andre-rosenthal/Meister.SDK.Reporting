@@ -34,7 +34,7 @@ namespace MeisterSDKReporting
     {
         public static string Retriever => "Meister.Reporting.Retrieve";
         public static string MyReports => "Meister.Reporting.MyReports";
-        public static String Finder => "Meister.Reporting.Finder";
+        public static String Finder => "Meister.Reporting.Report.Finder";
         public static string Scheduler => "Meister.Reporting.Scheduler";
         public static String GetParameters => "Meister.Reporting.Report.Parameters";
         public static string RunReport => "Meister.Reporting.Run";
@@ -66,6 +66,7 @@ namespace MeisterSDKReporting
         }
         public string Client { get; set; }
         public Uri Gateway { get; set; }
+        public MeisterSupport.Languages Language { get; set; }
         public bool IsODataV4 { get; set; }
         public AuthenticationHeaderValue AuthenticationHeaderValue { get; set; }
         public MeisterStatus MeisterStatus { get; set; }
@@ -97,14 +98,14 @@ namespace MeisterSDKReporting
             return (MeisterStatus.StatusCode >= HttpStatusCode.OK && MeisterStatus.StatusCode < HttpStatusCode.BadRequest);
         }
         #region Authentication
-        public bool Authenticate()
+        public bool Authenticate(MeisterSupport.Languages language = MeisterSupport.Languages.CultureBased)
         {
             MeisterExtensions = MeisterSupport.MeisterExtensions.RemoveNullsAndEmptyArrays;
             MeisterOptions = MeisterSupport.MeisterOptions.None;
             if (IsODataV4)
                 MeisterOptions = MeisterSupport.MeisterOptions.UseODataV4;
             MeisterRuntimeOptios = MeisterSupport.RuntimeOptions.ExecuteSync;
-            MeisterLanguageSetting = MeisterSupport.Languages.CultureBased;
+            MeisterLanguageSetting = language;
             Resource<dynamic, dynamic> resource = BuildResource<dynamic, dynamic>();
             MeisterStatus = resource.Authenticate();
             if (IsStatusOK())
